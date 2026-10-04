@@ -17,7 +17,7 @@ The Pacifics API authenticates requests with a bearer token.
 Send the token in the `Authorization` header:
 
 ```bash
-curl https://api.pacifics.example.com/v1/attack-paths \
+curl https://api.pacifics.in/v1/attack-paths \
   -H "Authorization: Bearer $PACIFICS_API_TOKEN"
 ```
 

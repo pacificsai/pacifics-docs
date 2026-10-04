@@ -10,7 +10,7 @@ findings, and attack paths.
 ## Base URL
 
 ```
-https://api.pacifics.example.com/v1
+https://api.pacifics.in/v1
 ```
 
 ## Conventions

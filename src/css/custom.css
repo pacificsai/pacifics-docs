@@ -22,9 +22,16 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-  /* Secondary brand surface. */
+  /* Secondary brand surface (light mode only). */
   --pacifics-secondary: #f0eee9;
   --ifm-background-surface-color: var(--pacifics-secondary);
+  --ifm-navbar-background-color: var(--pacifics-secondary);
+}
+
+/* Light mode only: data-theme='light' is set explicitly on the html element. */
+[data-theme='light'] {
+  --ifm-background-surface-color: var(--pacifics-secondary);
+  --ifm-navbar-background-color: var(--pacifics-secondary);
 }
 
 /* Dark mode (default theme).
@@ -43,4 +50,8 @@
   /* Use the warm off-white as the headline/emphasis color in dark mode. */
   --pacifics-secondary: #f0eee9;
   --ifm-heading-color: var(--pacifics-secondary);
+
+  /* Keep dark surfaces dark so the navbar text/logo stay visible. */
+  --ifm-background-surface-color: #1b1b1d;
+  --ifm-navbar-background-color: #1b1b1d;
 }

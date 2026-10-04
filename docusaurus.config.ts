@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Pacifics',
   tagline: 'Security Context + Attack Path Intelligence + Controlled AI',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/icons/app/favicon.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -55,7 +55,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/icons/app/favicon.png',
     colorMode: {
       defaultMode: 'dark',
       respectPrefersColorScheme: false,
@@ -64,7 +64,8 @@ const config: Config = {
       title: 'Pacifics',
       logo: {
         alt: 'Pacifics Logo',
-        src: 'img/logo.svg',
+        src: 'img/icons/app/dark.png',
+        srcDark: 'img/icons/app/light.png',
       },
       items: [
         {

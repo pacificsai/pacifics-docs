@@ -1,0 +1,48 @@
+# Pacifics
+
+> Pacifics is an AI-powered cybersecurity intelligence platform that helps organizations understand security risk in context. It acts as a Security Context Layer across the security ecosystem, combining a Security Context Graph, Attack Path Intelligence, and Controlled AI.
+
+Pacifics connects fragmented security signals — cloud resources, assets, vulnerabilities, identities, permissions, exposures, and sensitive data — into a unified graph, then reasons over that graph to surface the attack paths that actually matter.
+
+- Website: https://pacifics.in
+- App: https://app.pacifics.in
+- Docs: https://docs.pacifics.in
+- Source: https://github.com/pacificsai/pacifics-docs
+- License: Apache-2.0
+
+## Getting Started
+
+- [Introduction](https://docs.pacifics.in/docs/getting-started/introduction): What Pacifics is and what you can do with it.
+- [Quickstart](https://docs.pacifics.in/docs/getting-started/quickstart): Get Pacifics running against your environment in a few steps.
+- [Connect Your Environment](https://docs.pacifics.in/docs/getting-started/connect-environment): Connect cloud, identity, and source-control data sources.
+- [Your First Attack Path](https://docs.pacifics.in/docs/getting-started/first-attack-path): Read and act on your first attack path.
+
+## Platform
+
+- [Security Context Graph](https://docs.pacifics.in/docs/platform/security-context-graph): The unified graph of assets, identities, permissions, vulnerabilities, exposure, and sensitive data.
+- [Attack Path Intelligence](https://docs.pacifics.in/docs/platform/attack-path-intelligence): How Pacifics traces and prioritizes realistic attack paths.
+- [AI Security Reasoning](https://docs.pacifics.in/docs/platform/ai-security-reasoning): Controlled AI reasoning grounded in your security data.
+
+## Guides
+
+- [Investigate with AI](https://docs.pacifics.in/docs/guides/investigate-with-ai): Investigate a finding or attack path end to end with AI.
+- [Explore Attack Paths](https://docs.pacifics.in/docs/guides/explore-attack-paths): Navigate and filter attack paths to focus on what matters.
+
+## Integrations
+
+- [Integrations](https://docs.pacifics.in/docs/integrations/integrations): Supported providers and how to connect them (read-only access).
+
+## API
+
+- [API Overview](https://docs.pacifics.in/docs/api/api): Programmatic access to the context graph, findings, and attack paths.
+- [Authentication](https://docs.pacifics.in/docs/api/authentication): Bearer-token authentication and token management.
+
+## Resources
+
+- [FAQ](https://docs.pacifics.in/docs/resources/faq): Common questions about Pacifics.
+- [Changelog](https://docs.pacifics.in/docs/resources/changelog): Notable changes.
+
+## Optional
+
+- [GitHub Repository](https://github.com/pacificsai/pacifics-docs): Documentation source.
+- [Security Policy](https://github.com/pacificsai/pacifics-docs/blob/main/SECURITY.md): How to report vulnerabilities.

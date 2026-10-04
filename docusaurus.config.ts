@@ -9,6 +9,40 @@ const config: Config = {
   tagline: 'Security Context + Attack Path Intelligence + Controlled AI',
   favicon: 'img/icons/app/favicon.png',
 
+  // Google tag (gtag.js) — inline, hardcoded measurement ID.
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {
+        async: 'true',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-959GJY4M3S',
+      },
+    },
+    {
+      tagName: 'script',
+      attributes: {},
+      innerHTML: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-959GJY4M3S');
+      `,
+    },
+    // Microsoft Clarity — inline, hardcoded project ID.
+    {
+      tagName: 'script',
+      attributes: {},
+      innerHTML: `
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "yse39qpdrv");
+      `,
+    },
+  ],
+
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
@@ -49,8 +83,38 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: {
+          lastmod: 'date',
+          changefreq: 'weekly',
+          priority: 0.5,
+          filename: 'sitemap.xml',
+        },
       } satisfies Preset.Options,
     ],
+  ],
+
+  plugins: [
+    // Dynamically generate robots.txt from the site URL so it always points at
+    // the correct sitemap, regardless of the deployed domain.
+    function robotsTxtPlugin() {
+      return {
+        name: 'pacifics-robots-txt',
+        async postBuild({siteConfig, outDir}) {
+          const {url} = siteConfig;
+          const sitemapUrl = new URL('/sitemap.xml', url).href;
+          const content = [
+            'User-agent: *',
+            'Allow: /',
+            '',
+            `Sitemap: ${sitemapUrl}`,
+            '',
+          ].join('\n');
+          const fs = await import('fs/promises');
+          const path = await import('path');
+          await fs.writeFile(path.join(outDir, 'robots.txt'), content, 'utf8');
+        },
+      };
+    },
   ],
 
   themeConfig: {
